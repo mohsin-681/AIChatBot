@@ -2,11 +2,13 @@ import streamlit as st
 import requests
 import uuid
 
+
 # --- Configuration ---
-WEBHOOK_URL = "http://localhost:5678/webhook/invoke_agent"  # replace with your webhook URL
+WEBHOOK_URL =   st.secrets["url"]
 # WEBHOOK_URL ="http://localhost:5678/webhook-test/invoke_agent"
-BEARER_TOKEN = "abcd1234"
+BEARER_TOKEN = st.secrets["token"]
 LOGO_PATH = "logo.jpg"  # local file or URL
+
 
 # --- Session state ---
 if "session_id" not in st.session_state:
